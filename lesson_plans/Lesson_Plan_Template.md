@@ -2,6 +2,13 @@
 
 This repository contains all the information for the IMS lecture `TITLE`.
 
+## TODO
+
+* [ ] Make Slides
+* [ ] Make Exit Ticket 
+* [ ] Add Resources 
+* [ ] Create Learning Objectives 
+
 ## Resources
 
 * [Link to Slides]()
