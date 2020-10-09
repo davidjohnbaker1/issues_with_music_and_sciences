@@ -23,6 +23,13 @@ By the end of this lesson students will be able to:
 
 > Use template to aid in checking for understanding
 
+
+## Outline
+
+* [ ] Think, Pair Share 1  
+* [ ] Think, Pair Share 2  
+* [ ] Think, Pair Share 3  
+
 ### Knowledge 
 
 * [ ] Select

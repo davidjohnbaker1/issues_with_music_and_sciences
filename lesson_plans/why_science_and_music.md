@@ -31,8 +31,8 @@ By the end of this lesson students will be able to:
 ## Lesson Outline 
 
 1. Establish Scope of Course 
-2. Discussin definition of Science
-3. Discussin definition of Music
+2. Discuss definition of Science
+3. Discuss definition of Music
 4. Note Historical Links Between Music and Science 
 5. Define Terms using German Taxonomy (but question) 
 
@@ -57,6 +57,8 @@ By the end of this lesson students will be able to:
 ## Resources 
 
 Further reading that can help in your own preparation and reading for students can be found:
+
+* [What is Musicology](https://www.thebritishacademy.ac.uk/blog/what-is-musicology/)
 
 ### Defining Science 
 
