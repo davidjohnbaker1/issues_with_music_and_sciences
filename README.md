@@ -14,6 +14,10 @@ The initial course description is as follows:
 
 > For undergraduate students at HU Berlin interested in music and the sciences, the course Issues in Music and Sciences will introduce students to the problems, solutions, and difficulties that arise when questions about music are investigated with scientific methods. The course consists of 16 seminars that survey topics ranging from the history of music and science, philosophy of science, the perception of music, social psychology of music, neuroscience of music, as well as investigating how the study of music and sciences are currently used in industry applications. After completing this course, students will be able to critically assess scientific inquiry as applied to music and be able to give practical examples that demonstrate their thinking. Students will also be shown what types of career paths are afforded in studying music and the sciences. 
 
+## Berlin Info
+
+* [Moodle](https://moodle.hu-berlin.de/course/view.php?id=100524)
+
 The names of the lectures and their content that are covered in the course are:
 
 | Lecture Title                             |Content Area                               |   
@@ -24,7 +28,7 @@ The names of the lectures and their content that are covered in the course are:
 | Eureka! I've Discoverd C Major!           | Replicating a Finding                     | 
 | Bleep Bloop                               | Music and Psychoacoustics                 |
 | On The Tip Of My Tongue                   | Musical Memory and Expectation            |
-| Scorpios Prefer Britney Spears (p < .05)  | Music and Identity                        |
+| Scorpios Prefer UK Garage (p < .05)       | Music and Identity                        |
 | Music Makes Your Brain Light Up           | Music and Neurosciene                     |
 | Right in the Feelings                     | Music and Emotion                         | 
 | Loftier Claims                            | Music, Culture, and Evolution             | 

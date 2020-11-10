@@ -30,7 +30,7 @@ By the end of this lesson students will be able to:
 
 ## Lesson Outline 
 
-1. Establish Scope of Course 
+1. Explain the scope of course 
 2. Discuss definition of Science
 3. Discuss definition of Music
 4. Note Historical Links Between Music and Science 
@@ -71,3 +71,7 @@ Further reading that can help in your own preparation and reading for students c
 ### Defining Musicology
 
 * [Parncutt (2007) Systematic musicology and the history and future of Western musical scholarship](http://musicstudies.org/wp-content/uploads/2017/01/Systematic_Musicology_PARNCUTT1-32.pdf)
+* [Handbook of Systematic Musicology]()
+
+
+
