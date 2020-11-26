@@ -1,0 +1,180 @@
+---
+title: "Replicating Markdown"
+author: "David John Baker"
+date: "25/11/2020"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+## Regression Review
+
+* Ended last class talking about what we gain and lose with using statistical models
+  - Gain: 
+  -Lose: 
+
+* Want to know, is this any good?
+
+```{r, echo=FALSE}
+library(dplyr)
+library(ggplot2)
+library(magrittr)
+```
+
+# Generate Data For Examples
+
+```{r}
+set.seed(669)
+N_small <- 20
+N_big <- 50
+
+min_practiced <- rnorm(N_small, mean = 100, sd = 1)
+
+# add noise
+min_practiced <- min_practiced + rnorm(N_small, mean = 0, sd = 2)
+
+min_practiced <- min_practiced - 90
+
+# predict errors 
+number_of_errors <- (min_practiced * -0.45) + rnorm(N_small, mean = 0 , sd = 2)
+
+number_of_errors <- number_of_errors + 15
+
+no_relationship <- rnorm(N_small, mean = 10, sd = 2)
+
+df <- data.frame(min_practiced, number_of_errors, no_relationship)
+
+df %>% round(0) %>% View()
+
+
+```
+
+# Plots 
+
+```{r}
+# No Data 
+df %>%
+  ggplot(aes(x = min_practiced, y = number_of_errors)) +
+  #geom_point() +
+  labs(title = "Model For Practicing",
+       y = "Number of Mistakes in Performance",
+       x = "Number of Minutes Practiced") +
+  theme_minimal() +
+  geom_smooth(method = "lm", se = FALSE) -> no_data_plot
+
+ggsave(filename = "lesson_plans/04_replicating_a_finding/no_data_plot.png", no_data_plot, dpi = 300,
+       height = 3, width = 5, units = "in")
+
+
+df %>%
+  ggplot(aes(x = min_practiced, y = number_of_errors)) +
+  geom_point() +
+  labs(title = "Data From Practicing Experiment",
+       y = "Number of Mistakes in Performance",
+       x = "Number of Minutes Practiced") +
+  theme_minimal() -> exp1
+  #geom_smooth(method = "lm", se = FALSE) -> exp1
+
+ggsave(filename = "lesson_plans/04_replicating_a_finding/data_exp1.png", exp1, dpi = 300,
+       height = 3, width = 5, units = "in")
+
+
+df %>%
+  ggplot(aes(x = min_practiced, y = no_relationship+ rnorm(N_small, sd = 6))) +
+  geom_point() +
+  labs(title = "Data From Practicing Experiment: No Relationship",
+       y = "Number of Mistakes in Performance",
+       x = "Number of Minutes Practiced") +
+  theme_minimal() -> exp1norel
+  #geom_smooth(method = "lm", se = FALSE) -> exp1
+
+ggsave(filename = "lesson_plans/04_replicating_a_finding/data_exp1norel.png", exp1norel, dpi = 300,
+       height = 3, width = 5, units = "in")
+
+
+# Smoothed
+df %>%
+  ggplot(aes(x = min_practiced, y = no_relationship + rnorm(N_small, sd = 6))) +
+  geom_point() +
+  labs(title = "Data From Practicing Experiment: No Relationship",
+       y = "Number of Mistakes in Performance",
+       x = "Number of Minutes Practiced") +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_minimal() -> exp1norelsmooth
+  #geom_smooth(method = "lm", se = FALSE) -> exp1
+
+exp1norelsmooth
+
+ggsave(filename = "lesson_plans/04_replicating_a_finding/data_exp1norelsmooth.png", exp1norelsmooth, dpi = 300,
+       height = 3, width = 5, units = "in")
+
+df %>%
+  ggplot(aes(x = min_practiced, y = number_of_errors)) +
+  geom_point() +
+  labs(title = "Data From Practicing Experiment",
+       y = "Number of Mistakes in Performance",
+       x = "Number of Minutes Practiced") +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_minimal() -> exp1smooth
+  #geom_smooth(method = "lm", se = FALSE) -> exp1
+
+ggsave(filename = "lesson_plans/04_replicating_a_finding/data_exp1smooth.png", exp1smooth, dpi = 300,
+       height = 3, width = 5, units = "in")
+
+
+#------------------------------
+lm_1 <- lm(number_of_errors ~ min_practiced, data = df)
+
+summary(lm_1)
+
+
+
+
+```
+
+
+```{r}
+min_practiced <- rnorm(N_big, mean = 100, sd = 1)
+
+# add noise
+min_practiced <- min_practiced + rnorm(N_big, mean = 0, sd = 2)
+
+min_practiced <- min_practiced - 90
+
+# predict errors 
+number_of_errors <- (min_practiced * -0.45) + rnorm(N_big, mean = 0 , sd = 2)
+
+number_of_errors <- number_of_errors + 15
+
+no_relationship <- rnorm(N_big, mean = 10, sd = 2)
+
+df <- data.frame(min_practiced, number_of_errors, no_relationship)
+
+df %>% round(0) %>% View()
+
+df %>%
+  ggplot(aes(x = min_practiced, y = number_of_errors)) +
+  geom_point() +
+  labs(title = "Data From Practicing Experiment: Experiment II",
+       y = "Number of Mistakes in Performance",
+       x = "Number of Minutes Practiced") +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_minimal() -> exp2smooth
+  #geom_smooth(method = "lm", se = FALSE) -> exp1
+
+ggsave(filename = "lesson_plans/04_replicating_a_finding/data_exp2smooth.png", exp2smooth, dpi = 300,
+       height = 3, width = 5, units = "in")
+
+
+lm2 <- lm(number_of_errors ~ min_practiced, data = df)
+
+summary(lm2)
+
+lm3 <- lm(number_of_errors ~ no_relationship, data = df)
+
+summary(lm3)
+
+```
+
+
+

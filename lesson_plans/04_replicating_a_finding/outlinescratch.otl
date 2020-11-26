@@ -1,0 +1,186 @@
+Outline Scratch
+
+Topics to Cover 
+
+Claiming a discovery
+Being Proven Wrong
+Severity Testing
+Replication Crisis
+Error (NHST or Bayes)
+2x2 grid
+Many ways of being wrong
+NHST
+
+Not only no access to truth, work with models, but world is not deterministic
+	Have regression model, not same for all people
+	Need way to quantify how good or bad this model is
+	Visually, can see this model with line
+	Show two different sets of data, which is better?
+	This class focuses on many ways to be wrong in science 
+
+Demonstrate with thought walk through of experiment
+	will show steps to thinking about problem in first half
+	second half of class we talk about terms to describe 
+
+Imagine psychologist interested in learning about how people learn music
+	FRAMEWORK: Long term learning 
+
+	THEORY: Hebbian learning, neurons that fire together, wire together
+			this leads to more effecient processing of information 
+			mylen in cells forms better connections, information travels well 
+
+			applied with piano research 
+	
+	SPECIFICATION: As time spent playing a piece of music goes up, you make less errors 
+
+	IMPLEMENTATION: R Code 
+
+	HYPOTHESIS: Errors will reduce linearly as time practicing goes up 
+
+	Data: Get 50 people to practice first page of PIECE OF MUSIC, record their time practicing
+			They perform piece at end of week, we count times they make an error
+	
+NEW TERMS
+	Independent Variable -- what we want to manipulate 
+
+	Dependent Variable -- what we think will change based on manipulations  
+
+EXPERIMENTS
+
+
+DATA ANALYSIS
+
+	Week goes by and you get all your data 
+	Organized in a spreadsheet (TIDY DATA) 
+	How do you know if there is evidence here that if you practice more, people make less errors?
+	SHOW DAG? 
+
+	First step, plot your data 
+
+	Is there evidence here that there is an effect of learning? 
+	Can we CLAIM we found something here? 
+		small effect 
+		large effect 
+	
+	Danger zone: problem of induction, get someone who makes no errors with no practice! 
+					people who just don't get any better with practice at all 
+
+	Problem is that need a way to quantify that somethign IS happening
+
+	TO do this, need to return to problem of induction and want to use fact that you can take down theory easier
+
+	;SCENARIO 1 
+	Goign to show one way of doing this
+
+	What if instead of accumulating evidence FOR something 
+	we looked for evidence for nothing NOT happening?
+	
+	Seems obnoxious, but if we know nothing is NOT happening, what are we left with? 
+	This is the logic of NHST and p values 
+
+	Gives P(data|hypothesis that nothing is happening) 
+
+	What would we compare this against? 
+	Well what would nothing happening look like as a model? 
+	Show horizontal line
+
+	Essentially going to do a statistical test to show that it's not 0
+	Run regression in R, show p value, just means its not 0
+	how BIG the effect of learning is is the coeffeient of the model 
+	This is the EFFECT SIZE
+
+WRITE UP 
+
+	Small journal 
+	Write tried to investigate idea of hebbian learning in piano practicing 
+	did little experiment with 20 people, got results
+	How robust are these results?
+	Reviewer thinks that it was a fluke!! 
+	Asks you to do another experiment 
+	asked to REPLICATE your results 
+
+Run it again?
+
+	Important to ask yourself, do you think we'll get the EXACT same results?
+	Of course not, but we will be in the ball park
+	Do it again 
+
+	Cohort II, pretty close, but data def not the same
+	Notice effect size is a bit LESS with MORE people 
+
+WRITE UP 2 
+	
+	Include it in your little journal article, have more evidence for it!
+
+REVIEW 
+	Independent Varaible
+	Dependent Variable 
+	Regression 
+	Error - residuals 
+	Replicate 
+
+BREAK
+
+
+When it goes wrong? 
+	Idea that practice leads to less errors is quite established 
+	But what if you did an experiment and didnt' find something
+
+	Run Experiment III and get these results?
+	Show Null results? 
+	non significant p value 
+	Dissapoining, but due to probability and chance it COULD happen? 
+	
+	This would be a TYPE II error
+
+	If type II error is failing to find something that is there, what is type I error?
+
+	Type I error - claiming to find something that is NOT there 
+
+	Logically what is left is FINDING SOMTHING THAT IS THERE 
+							SUCESSFULLY REPORTING SOMETHING IS NOT THERE 
+
+	Show grid
+
+	Show way to remember this with wolf 
+
+Larger Level Problems with Psychology 
+	These types of questions have been at FOREFRONT of science past few years
+	in psychology, realizing that there are MANY studies that do not replicate 
+	Called Replication crisis in psychology
+	Music Psychology is not immue to this
+
+	Deep crisis, in what do we want in our experiments?
+	Not only are there problems of replication
+	but we also want these effects to generalize
+	what if we find that this effect we found is only present in this song? or only on piano?
+	Big problem if we claim that we are studying music learning?
+
+	With replications, tend to find less significant findigns
+	Also tend to find smaller effect sizes
+	
+	Why?
+	Lots of reasons for this to happen (Science Fictions by Stuart Richie) 
+
+	Fraud 
+		In scientific resaerch, get credibility and funding when find things 
+		People will fabricate findings to further their careers (scince is done by people) 
+	
+	Bias 
+		Some people will do a study, find nothing (a null result) and wont publish it
+
+	Negligence 
+
+	Hype 
+		People WANT things to work 
+		Confirmation Bias -- set out to show it works 
+
+MANY things to juggle when doing science
+	Rightful skepticicism 
+	Encourge you to review all terms here for next half of class when dive into literature
+
+
+	
+
+
+	
